@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "554498841958",
+    "project_id": "lojaflutter-36f50",
+    "storage_bucket": "lojaflutter-36f50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554498841958:android:da10a9bf4a967dd54c3ca7",
+        "android_client_info": {
+          "package_name": "alcimar.com.br.onlineshopflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554498841958-7a59ffgsipkjplc4a10kvsptgd8sqhod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqEKkgTNCfGAJHx8dQpcJZlVMvtofrzkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554498841958-7a59ffgsipkjplc4a10kvsptgd8sqhod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
