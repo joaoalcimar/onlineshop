@@ -25,7 +25,7 @@ class HomeTab extends StatelessWidget {
               backgroundColor: Colors.transparent,
               elevation: 0.0,
               flexibleSpace: FlexibleSpaceBar(
-                title: const Text("Novidades"),
+                title: const Text("What's New"),
                 centerTitle: true,
               ),
             ),
