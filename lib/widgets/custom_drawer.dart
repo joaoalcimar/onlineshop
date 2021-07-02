@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:onlineshopflutter/tiles/drawer_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
+
+  final PageController pageController;
+  CustomDrawer(this.pageController);
+
   @override
   Widget _buildDrawerBack() => Container(
         decoration: BoxDecoration(
@@ -65,10 +69,10 @@ class CustomDrawer extends StatelessWidget {
                 ),
               ),
               Divider(),
-              DrawerTile(Icons.home, "Home"),
-              DrawerTile(Icons.list, "Products"),
-              DrawerTile(Icons.location_on, "Shop Location"),
-              DrawerTile(Icons.playlist_add_check, "My Orders"),
+              DrawerTile(Icons.home, "Home", pageController, 0),
+              DrawerTile(Icons.list, "Products", pageController, 1),
+              DrawerTile(Icons.location_on, "Shop Location", pageController, 2),
+              DrawerTile(Icons.playlist_add_check, "My Orders", pageController, 3),
             ],
           )
         ],
