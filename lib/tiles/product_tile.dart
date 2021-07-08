@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:onlineshopflutter/datas/product_data.dart';
+import 'package:onlineshopflutter/screens/item_screen.dart';
 import 'package:onlineshopflutter/screens/products_screen.dart';
 
 class ProductTile extends StatelessWidget {
@@ -13,7 +14,7 @@ class ProductTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        // Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductsScreen(data)));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ItemScreen(data)));
       },
       child: Card(
         child: type == "grid"
@@ -24,7 +25,7 @@ class ProductTile extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 0.8,
                     child: Image.network(
-                      data.images![0],
+                      data.images![1],
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -51,7 +52,7 @@ class ProductTile extends StatelessWidget {
             : Row(children: <Widget>[
               // fix variabilidade tamanho do dispositivo
               Flexible(flex: 1, child: Image.network(
-            data.images![0],fit: BoxFit.cover, height: 250.0,)),
+            data.images![1],fit: BoxFit.cover, height: 250.0,)),
               Flexible(flex: 1, child: Container(
                 padding: EdgeInsets.all(20.0),
                 child: Column(
