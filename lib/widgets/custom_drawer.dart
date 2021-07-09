@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:onlineshopflutter/screens/login_screen.dart';
 import 'package:onlineshopflutter/tiles/drawer_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
-
   final PageController pageController;
+
   CustomDrawer(this.pageController);
 
   @override
@@ -51,16 +52,18 @@ class CustomDrawer extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 18.0, fontWeight: FontWeight.bold),
                           ),
-                          GestureDetector(child: Text(
-                            "Log-in or Sign-in >",
-                            style: TextStyle(
-                                color: Theme.of(context).primaryColor,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          onTap: (){
-
-                          },
+                          GestureDetector(
+                            child: Text(
+                              "Log-in or Sign-in >",
+                              style: TextStyle(
+                                  color: Theme.of(context).primaryColor,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => LoginScreen()));
+                            },
                           ),
                         ],
                       ),
@@ -72,7 +75,8 @@ class CustomDrawer extends StatelessWidget {
               DrawerTile(Icons.home, "Home", pageController, 0),
               DrawerTile(Icons.list, "Products", pageController, 1),
               DrawerTile(Icons.location_on, "Shop Location", pageController, 2),
-              DrawerTile(Icons.playlist_add_check, "My Orders", pageController, 3),
+              DrawerTile(
+                  Icons.playlist_add_check, "My Orders", pageController, 3),
             ],
           )
         ],
